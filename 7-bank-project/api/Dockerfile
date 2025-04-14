@@ -1,8 +1,8 @@
 # Dockerfile for Server
-FROM node:14
+FROM node:18
 
 # Set working directory
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy package.json and install dependencies
 COPY package*.json ./
@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 5000
 
 # Command to start the server
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
